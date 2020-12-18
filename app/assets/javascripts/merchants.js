@@ -43,6 +43,7 @@ function loadMerchant(merchant_id, container) {
     container.append(merchant_element)
   })
 }
+
 function loadMerchantWithEdit(merchant_id, container) {
   let uri = `/api/v1/merchants/${merchant_id}`
   loadResource(uri, function(merchant){
