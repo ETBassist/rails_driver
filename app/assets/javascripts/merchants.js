@@ -2,7 +2,7 @@ function merchantListItem(merchant, linkPrefix) {
   let name = merchant.attributes.name
   let href = linkPrefix + merchant.id
   let merchant_element = `
-    <li><a href='${href}'>${name}</a></li>
+    <li class="list-group-item list-group-item-action"><a href='${href}'>${name}</a></li>
   `
   return merchant_element
 }
