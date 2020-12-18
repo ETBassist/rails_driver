@@ -1,9 +1,17 @@
-<h2>Merchants</h2>
+<h2 class="display-2 text-center">Merchants</h2>
 
-<%= form_with url: admin_merchants_search_path, class: "form-inline my-2 my-lg-0" do |form| %>
-  <%= form.text_field :merchant_name, class: "mr-sm-2 form-control", type: "search", placeholder: "merchant name" %>
-  <%= form.submit "Search for Merchants", class: "btn btn-outline-success my-2 my-sm-0" %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-auto">
+      <%= form_with url: admin_merchants_search_path, class: "form-inline my-2 my-lg-0" do |form| %>
+        <%= form.text_field :merchant_name, class: "mr-sm-2 form-control", type: "search", placeholder: "merchant name" %>
+        <%= form.submit "Search for Merchants", class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 
@@ -11,20 +19,22 @@
 
 </div>
 
-<h3>Top 10 Merchants by Most Revenue</h3>
-<ul id="top-merchants-revenue">
-</ul>
+<div class="container text-center">
+  <h3>Top 10 Merchants by Most Revenue</h3>
+    <ul id="top-merchants-revenue">
+  </ul>
 
-<h3>Top 10 Merchants by Most Items Sold</h3>
-<ul id="top-merchants-items">
-</ul>
+  <h3>Top 10 Merchants by Most Items Sold</h3>
+    <ul id="top-merchants-items">
+  </ul>
 
-<h3>Revenue for the past 7 days:</h3>
-<div id="recent-revenue">
+  <h3>Revenue for the past 7 days:</h3>
+    <div id="recent-revenue">
+  </div>
+
+  <ul id="merchants">
+  </ul>
 </div>
-
-<ul id="merchants">
-</ul>
 
 <script>
   loadMerchantsWithMostRevenue($('#top-merchants-revenue'))

@@ -1,8 +1,19 @@
-<h1>Merchants</h1>
-<%= link_to "Create a Merchant", new_merchant_path %>
-<ul id="merchants">
+<h1 class="display-2 text-center">Merchants</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col text-right">
+      <%= link_to "Create a Merchant", new_merchant_path %>
+    </div>
+  </div>
+</div>
 
-</ul>
+<div class="container text-center">
+  <ul id="merchants">
+
+  </ul>
+</div>
 
 <script>
   loadAllMerchants($("#merchants"))

@@ -1,6 +1,8 @@
-<h1>Search Results for "<%= @search_term %>"</h1>
-<ul>
-  <% @merchants.each do |merchant| %>
-    <li><%= link_to merchant.name, admin_merchant_path(merchant.id) %></li>
-  <% end %>
-</ul>
+<h1 class="display-2 text-center">Search Results for "<%= @search_term %>"</h1>
+<div class="container text-center">
+  <ul class="list-group">
+    <% @merchants.each do |merchant| %>
+      <li class="list-group-item list-group-item-action"><%= link_to merchant.name, admin_merchant_path(merchant.id) %></li>
+    <% end %>
+  </ul>
+</div>
